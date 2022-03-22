@@ -101,7 +101,6 @@ resource "aws_network_interface" "webserver_if" {
   subnet_id       = aws_subnet.prod_subnet.id
   private_ips     = var.private_ips_prefix  
   security_groups = [aws_security_group.Prod_Security_Group.id]
-  #depends_on = [aws_subnet.prod_subnet]
 }
 
 resource "aws_eip" "one" {
